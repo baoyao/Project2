@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Meter</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    
+    <string name="speed">速度</string>
+    <string name="mode">模式</string>
+    <string name="controll">控制</string>
+    <string name="brake">刹车</string>
+    
+    <string name="light">灯</string>
+    <string name="lock">锁定</string>
+    <string name="music">音乐</string>
+    <string name="settings">设置</string>
+    
+    <string name="control_shoudong">手动模式</string>
+    <string name="control_yaokong">遥控器模式</string>
+    <string name="control_diannao">电脑模式</string>
+    
+    <string name="brake_zidong_mode">自动刹车模式</string>
+    <string name="brake_zidong_mode_description">驾驶不熟练的儿童专用的自动刹车模式</string>
+    <string name="brake_shoudong_mode">手动刹车模式</string>
+    <string name="brake_shoudong_mode_description">像正真的轿车一样</string>
+    
+    <string name="check_light_mode">请选择车辆照明</string>
+    <string name="light_mode_toudeng">头灯</string>
+    <string name="light_mode_rixingdeng">日行灯</string>
+    
+    
+    <string name="lock_screen_title">Draw an unlock pattern</string>
+    <string name="lock_screen_continue">Continue</string>
+    <string name="lock_screen_cancel">Cancel</string>
+    
+    <string-array name="settings_title">
+        <item >车辆信息</item>
+        <item >一般</item>
+        <item >游戏</item>
+        <item >教育</item>
+        <item >网络</item>
+        <item >音乐</item>
+        <item >视频</item>
+        <item >自我诊断</item>
+        <item >锁定</item>
+        <item >语言</item>
+        <item >功能键</item>
+    </string-array>
+
+</resources>

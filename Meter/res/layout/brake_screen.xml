@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/screen_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:background="#485F74"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zidong_shoudong_bg"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <SeekBar
+                android:id="@+id/brakeModeSeekBar"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:indeterminateDrawable="@drawable/btn1"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/progressbar"
+                android:thumb="@drawable/seekbar_thumb" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:background="#7099B6" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:text="@string/brake_zidong_mode"
+                android:textSize="18sp"/>
+                <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:text="@string/brake_zidong_mode_description"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:text="@string/brake_shoudong_mode"
+                android:textSize="18sp"/>
+                <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:text="@string/brake_shoudong_mode_description"/>
+            </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
