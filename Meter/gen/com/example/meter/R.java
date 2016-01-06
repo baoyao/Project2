@@ -18,6 +18,8 @@ public final class R {
         /**  按钮选中颜色 
          */
         public static final int imagebutton_bg_pressed=0x7f040001;
+        /**  <drawable name="settings_left_item_selector_normal">#00000000</drawable> 
+         */
         public static final int text_normal_bg=0x7f040002;
         public static final int text_pressed_bg=0x7f040003;
     }
@@ -31,6 +33,7 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+        public static final int settings_left_item_height=0x7f050003;
         public static final int textSize=0x7f050002;
     }
     public static final class drawable {
@@ -72,19 +75,21 @@ public final class R {
         public static final int right_btn_normal=0x7f020023;
         public static final int right_imagebutton_bg_selector=0x7f020024;
         public static final int seekbar_thumb=0x7f020025;
-        public static final int speed_bottoom_bg=0x7f020026;
-        public static final int speed_content_bg=0x7f020027;
-        public static final int speed_progress=0x7f020028;
-        public static final int switch_off=0x7f020029;
-        public static final int switch_on=0x7f02002a;
+        public static final int settings_left_item_selector=0x7f020026;
+        public static final int speed_bottoom_bg=0x7f020027;
+        public static final int speed_content_bg=0x7f020028;
+        public static final int speed_progress=0x7f020029;
+        public static final int switch_off=0x7f02002a;
+        public static final int switch_on=0x7f02002b;
         /**  按钮选中颜色 
          */
-        public static final int switch_track_on=0x7f02002d;
-        public static final int text_selector=0x7f02002b;
-        public static final int zidong_shoudong_bg=0x7f02002c;
+        public static final int switch_track_on=0x7f02002f;
+        public static final int text_selector=0x7f02002c;
+        public static final int transparent=0x7f02002d;
+        public static final int zidong_shoudong_bg=0x7f02002e;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a002e;
+        public static final int action_settings=0x7f0a0033;
         public static final int brakeModeSeekBar=0x7f0a000e;
         public static final int btn_1=0x7f0a0001;
         public static final int btn_2=0x7f0a0002;
@@ -104,10 +109,12 @@ public final class R {
         public static final int controlRadioButton2=0x7f0a0011;
         public static final int controlRadioButton3=0x7f0a0012;
         public static final int controlRadioGroup=0x7f0a000f;
-        public static final int dangWeiSeekBar=0x7f0a002d;
-        public static final int dangWeiTxt=0x7f0a002c;
+        public static final int dangWeiSeekBar=0x7f0a0032;
+        public static final int dangWeiTxt=0x7f0a0031;
         public static final int img_num=0x7f0a000c;
         public static final int leftbtn_gp=0x7f0a0000;
+        public static final int lineBottom=0x7f0a002d;
+        public static final int lineTop=0x7f0a002c;
         public static final int lock_screen_cancel=0x7f0a0019;
         public static final int lock_screen_continue=0x7f0a001a;
         public static final int lock_screen_title=0x7f0a0018;
@@ -123,13 +130,16 @@ public final class R {
         public static final int right6=0x7f0a0029;
         public static final int rightbtn_gp=0x7f0a0005;
         public static final int rixingdeng_checkbox=0x7f0a0017;
-        public static final int select=0x7f0a002b;
+        public static final int select=0x7f0a0030;
+        public static final int setting_carinfo_tab_view=0x7f0a002b;
+        public static final int settings_carinfo_content=0x7f0a002a;
+        public static final int settings_content=0x7f0a002f;
+        public static final int settings_left_options=0x7f0a002e;
         public static final int speed_progress=0x7f0a001e;
         public static final int title=0x7f0a0021;
         public static final int titleIcon=0x7f0a0022;
         public static final int titleLayoutLeft=0x7f0a0020;
         public static final int titleLayoutRight=0x7f0a0023;
-        public static final int title_list=0x7f0a002a;
         public static final int toudeng_checkbox=0x7f0a0015;
     }
     public static final class layout {
@@ -141,9 +151,17 @@ public final class R {
         public static final int mode_screen=0x7f030005;
         public static final int music_screen=0x7f030006;
         public static final int screen_title=0x7f030007;
-        public static final int settings_screen=0x7f030008;
-        public static final int settings_title_list_item=0x7f030009;
-        public static final int speed_screen=0x7f03000a;
+        public static final int settings_carinfo=0x7f030008;
+        public static final int settings_carinfo_bottom_option=0x7f030009;
+        public static final int settings_carinfo_dy=0x7f03000a;
+        public static final int settings_carinfo_xslc=0x7f03000b;
+        public static final int settings_carinfo_xtwd=0x7f03000c;
+        public static final int settings_carinfo_xzsz=0x7f03000d;
+        public static final int settings_carinfo_zxwt=0x7f03000e;
+        public static final int settings_checksefl=0x7f03000f;
+        public static final int settings_screen=0x7f030010;
+        public static final int settings_title_list_item=0x7f030011;
+        public static final int speed_screen=0x7f030012;
     }
     public static final class menu {
         public static final int main=0x7f090000;
@@ -156,6 +174,11 @@ public final class R {
         public static final int brake_shoudong_mode_description=0x7f060019;
         public static final int brake_zidong_mode=0x7f060016;
         public static final int brake_zidong_mode_description=0x7f060017;
+        public static final int car_info_dianya_dianchi=0x7f060022;
+        public static final int car_info_xianzaishezhi=0x7f060024;
+        public static final int car_info_xingshilicheng=0x7f060023;
+        public static final int car_info_xitongwendu=0x7f060021;
+        public static final int car_info_zhuanxiangweitiao=0x7f060020;
         public static final int check_light_mode=0x7f06001a;
         public static final int control_diannao=0x7f060015;
         public static final int control_shoudong=0x7f060013;

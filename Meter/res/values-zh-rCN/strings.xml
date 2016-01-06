@@ -47,5 +47,12 @@
         <item >语言</item>
         <item >功能键</item>
     </string-array>
+    
+    <string name="car_info_zhuanxiangweitiao">转向微调</string>
+    <string name="car_info_xitongwendu">系统温度</string>
+    <string name="car_info_dianya_dianchi">电压/电池</string>
+    <string name="car_info_xingshilicheng">行驶里程</string>
+    <string name="car_info_xianzaishezhi">现在设置</string>
+    
 
 </resources>

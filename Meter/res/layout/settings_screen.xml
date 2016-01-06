@@ -10,26 +10,28 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="11"
-        android:background="#0000ff"
         android:orientation="horizontal" >
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#ffff00" >
+            android:layout_weight="1" >
 
-            <ListView
-                android:id="@+id/title_list"
+            <RadioGroup
+                android:id="@+id/settings_left_options"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:background="#537E99" >
+            </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/settings_content"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:background="#00ff00" >
+            android:layout_weight="4" 
+            android:orientation="horizontal"
+            android:background="#5F7E95">
         </LinearLayout>
     </LinearLayout>
 

@@ -5,6 +5,7 @@
     <color name="imagebutton_bg_pressed">#3C3C3C</color><!-- 按钮选中颜色 -->
     
     <drawable name="switch_track_on">#00000000</drawable>
+    <!-- <drawable name="settings_left_item_selector_normal">#00000000</drawable> -->
     
     <color name="text_normal_bg">#00000000</color>
     <color name="text_pressed_bg">#00ff00</color>

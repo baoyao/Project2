@@ -40,7 +40,6 @@ public class MainActivity extends Activity {
 		this.abCircleProgressBar = ((AbCircleProgressBar) findViewById(R.id.circleProgressBar));
 		this.abCircleProgressBar.setMax(22);
 		this.abCircleProgressBar.setProgress(4);
-		
 	}
 
 	public void btnOnclick(View view) {

@@ -1,8 +1,10 @@
 package com.example.meter.detail.settings;
 
 import com.example.meter.R;
+import com.example.meter.detail.SettingsActivity;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +14,18 @@ import android.widget.TextView;
 
 public class SettingsTitleAdapter extends BaseAdapter {
 
+	private SettingsActivity activity;
+	
 	private Context mContext;
+	
 	private String[] mTitles;
+	
 
 	public SettingsTitleAdapter(Context context,String[] titles) {
 		// TODO Auto-generated constructor stub
 		this.mContext = context;
 		this.mTitles=titles;
+		this.activity=(SettingsActivity) context;
 	}
 
 	@Override
@@ -61,6 +68,13 @@ public class SettingsTitleAdapter extends BaseAdapter {
 			convertView.setTag(hold);
 		} else {
 			hold = (ViewHold) convertView.getTag();
+		}
+		
+		if(position == activity.selectIndex){
+			convertView.setSelected(true);
+			Log.v("tt", "getView position: "+position);
+		}else if(convertView.isSelected()){
+			convertView.setSelected(false);
 		}
 		
 		hold.titleTextView.setText(mTitles[position]);
