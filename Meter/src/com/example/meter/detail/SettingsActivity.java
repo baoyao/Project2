@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.annotation.SuppressLint;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -51,7 +51,7 @@ public class SettingsActivity extends BaseActivity implements
 		title = (TextView) findViewById(R.id.title);
 		title.setText(getResources().getString(R.string.settings));
 		mContentLayout = (LinearLayout) findViewById(R.id.settings_content);
-		mFragmentManager = getFragmentManager();
+		mFragmentManager = getSupportFragmentManager();
 		initSettingsItem();
 		setLeftOptionItem();
 	}
@@ -149,6 +149,7 @@ public class SettingsActivity extends BaseActivity implements
 				settingsLanguage);
 		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
 				settingsFeature);
+		
 		fragmentTransaction.commit();
 	}
 
