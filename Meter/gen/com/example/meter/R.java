@@ -18,6 +18,8 @@ public final class R {
         /**  按钮选中颜色 
          */
         public static final int imagebutton_bg_pressed=0x7f040001;
+        public static final int settings_xzsz_bottom_option_selected_color=0x7f040005;
+        public static final int settings_xzsz_bottom_option_selected_normal=0x7f040004;
         /**  <drawable name="settings_left_item_selector_normal">#00000000</drawable> 
          */
         public static final int text_normal_bg=0x7f040002;
@@ -33,7 +35,10 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+        public static final int settings_general_item_margin_top=0x7f050006;
         public static final int settings_left_item_height=0x7f050003;
+        public static final int settings_xzsz_margin_top=0x7f050005;
+        public static final int settings_xzsz_text_size=0x7f050004;
         public static final int textSize=0x7f050002;
     }
     public static final class drawable {
@@ -89,7 +94,7 @@ public final class R {
         public static final int zidong_shoudong_bg=0x7f02002e;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0033;
+        public static final int action_settings=0x7f0a0036;
         public static final int brakeModeSeekBar=0x7f0a000e;
         public static final int btn_1=0x7f0a0001;
         public static final int btn_2=0x7f0a0002;
@@ -109,9 +114,10 @@ public final class R {
         public static final int controlRadioButton2=0x7f0a0011;
         public static final int controlRadioButton3=0x7f0a0012;
         public static final int controlRadioGroup=0x7f0a000f;
-        public static final int dangWeiSeekBar=0x7f0a0032;
-        public static final int dangWeiTxt=0x7f0a0031;
+        public static final int dangWeiSeekBar=0x7f0a0035;
+        public static final int dangWeiTxt=0x7f0a0034;
         public static final int img_num=0x7f0a000c;
+        public static final int kaishishezhi=0x7f0a002f;
         public static final int leftbtn_gp=0x7f0a0000;
         public static final int lineBottom=0x7f0a002d;
         public static final int lineTop=0x7f0a002c;
@@ -130,17 +136,19 @@ public final class R {
         public static final int right6=0x7f0a0029;
         public static final int rightbtn_gp=0x7f0a0005;
         public static final int rixingdeng_checkbox=0x7f0a0017;
-        public static final int select=0x7f0a0030;
+        public static final int select=0x7f0a0033;
         public static final int setting_carinfo_tab_view=0x7f0a002b;
         public static final int settings_carinfo_content=0x7f0a002a;
-        public static final int settings_content=0x7f0a002f;
-        public static final int settings_left_options=0x7f0a002e;
+        public static final int settings_content=0x7f0a0032;
+        public static final int settings_left_options=0x7f0a0031;
         public static final int speed_progress=0x7f0a001e;
         public static final int title=0x7f0a0021;
         public static final int titleIcon=0x7f0a0022;
         public static final int titleLayoutLeft=0x7f0a0020;
         public static final int titleLayoutRight=0x7f0a0023;
         public static final int toudeng_checkbox=0x7f0a0015;
+        public static final int yuyindaohang=0x7f0a002e;
+        public static final int zidongguanbi=0x7f0a0030;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -157,8 +165,8 @@ public final class R {
         public static final int settings_carinfo_xslc=0x7f03000b;
         public static final int settings_carinfo_xtwd=0x7f03000c;
         public static final int settings_carinfo_xzsz=0x7f03000d;
-        public static final int settings_carinfo_zxwt=0x7f03000e;
-        public static final int settings_checksefl=0x7f03000f;
+        public static final int settings_checksefl=0x7f03000e;
+        public static final int settings_general=0x7f03000f;
         public static final int settings_screen=0x7f030010;
         public static final int settings_title_list_item=0x7f030011;
         public static final int speed_screen=0x7f030012;
@@ -174,10 +182,19 @@ public final class R {
         public static final int brake_shoudong_mode_description=0x7f060019;
         public static final int brake_zidong_mode=0x7f060016;
         public static final int brake_zidong_mode_description=0x7f060017;
+        public static final int car_info_dangwei=0x7f06002a;
+        public static final int car_info_deng=0x7f06002d;
+        public static final int car_info_dianliang=0x7f06002c;
         public static final int car_info_dianya_dianchi=0x7f060022;
+        public static final int car_info_kongzhi=0x7f060028;
+        public static final int car_info_moshi=0x7f06002b;
+        public static final int car_info_rpm=0x7f060029;
+        public static final int car_info_sudu=0x7f060026;
+        public static final int car_info_sudugan=0x7f060027;
         public static final int car_info_xianzaishezhi=0x7f060024;
         public static final int car_info_xingshilicheng=0x7f060023;
         public static final int car_info_xitongwendu=0x7f060021;
+        public static final int car_info_xzsz=0x7f060025;
         public static final int car_info_zhuanxiangweitiao=0x7f060020;
         public static final int check_light_mode=0x7f06001a;
         public static final int control_diannao=0x7f060015;
@@ -201,6 +218,13 @@ public final class R {
         public static final int music=0x7f060011;
         public static final int one=0x7f060003;
         public static final int settings=0x7f060012;
+        public static final int settings_general_hw=0x7f060034;
+        public static final int settings_general_rw=0x7f060033;
+        public static final int settings_general_title=0x7f06002e;
+        public static final int settings_general_title1=0x7f06002f;
+        public static final int settings_general_title2=0x7f060030;
+        public static final int settings_general_title3=0x7f060031;
+        public static final int settings_general_title4=0x7f060032;
         public static final int speed=0x7f06000b;
         public static final int three=0x7f060005;
         public static final int two=0x7f060004;

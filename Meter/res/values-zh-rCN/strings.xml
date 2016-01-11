@@ -53,6 +53,24 @@
     <string name="car_info_dianya_dianchi">电压/电池</string>
     <string name="car_info_xingshilicheng">行驶里程</string>
     <string name="car_info_xianzaishezhi">现在设置</string>
+    <string name="car_info_xzsz">现在设置</string>
+    <string name="car_info_sudu">速度</string>
+    <string name="car_info_sudugan">速度杆：N</string>
+    <string name="car_info_kongzhi">控制：遥控行驶模型</string>
+    <string name="car_info_rpm">RPM</string>
+    <string name="car_info_dangwei">档位：档位5</string>
+    <string name="car_info_moshi">模式：D(舒适模式)</string>
+    <string name="car_info_dianliang">电量：3A</string>
+    <string name="car_info_deng">灯（开）</string>
     
+    
+    <string name="settings_general_title">一般</string>
+    <string name="settings_general_title1">语音导航</string>
+    <string name="settings_general_title2">开始设置</string>
+    <string name="settings_general_title3">自动关闭设置</string>
+    <string name="settings_general_title4">更新</string>
+    
+    <string name="settings_general_rw">软件ver：1.4.6</string>
+    <string name="settings_general_hw">固件ver：1.5.0</string>
 
 </resources>

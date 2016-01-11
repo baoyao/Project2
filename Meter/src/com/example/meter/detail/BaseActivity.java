@@ -6,13 +6,21 @@ import android.view.View;
 
 public abstract class BaseActivity extends Activity {
 
-	public abstract void setContentView();
+	public void setContentView(){
+		
+	}
 
-	public abstract void setTopView();
+	public void setTopView(){
+		
+	}
 
-	public abstract void setCenterView();
+	public void setCenterView(){
+		
+	}
 
-	public abstract void setBottomView();
+	public void setBottomView(){
+		
+	}
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

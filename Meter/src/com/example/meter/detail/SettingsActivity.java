@@ -7,7 +7,6 @@ import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -17,7 +16,17 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.meter.R;
-import com.example.meter.detail.settings.*;
+import com.example.meter.detail.settings.SettingsCarInfo;
+import com.example.meter.detail.settings.SettingsCheckSelf;
+import com.example.meter.detail.settings.SettingsEducation;
+import com.example.meter.detail.settings.SettingsFeature;
+import com.example.meter.detail.settings.SettingsGame;
+import com.example.meter.detail.settings.SettingsGeneral;
+import com.example.meter.detail.settings.SettingsLanguage;
+import com.example.meter.detail.settings.SettingsLock;
+import com.example.meter.detail.settings.SettingsMusic;
+import com.example.meter.detail.settings.SettingsNetwork;
+import com.example.meter.detail.settings.SettingsVideo;
 
 public class SettingsActivity extends BaseActivity implements
 		OnCheckedChangeListener {
@@ -91,8 +100,9 @@ public class SettingsActivity extends BaseActivity implements
 			return;
 		}
 		int position = (Integer) buttonView.getTag();
-		FragmentTransaction fragmentTransaction= mFragmentManager.beginTransaction();
-		if(currentFragment!=null){
+		FragmentTransaction fragmentTransaction = mFragmentManager
+				.beginTransaction();
+		if (currentFragment != null) {
 			fragmentTransaction.hide(currentFragment);
 		}
 		fragmentTransaction.show(mFragments.get(position)).commit();
@@ -112,38 +122,46 @@ public class SettingsActivity extends BaseActivity implements
 		SettingsLanguage settingsLanguage = new SettingsLanguage();
 		SettingsFeature settingsFeature = new SettingsFeature();
 
-		mFragmentManager
-				.beginTransaction()
-				.add(R.id.settings_content, settingsCarInfo, "SettingsCarInfo")
-				.add(R.id.settings_content, settingsGeneral, "SettingsGeneral")
-				.add(R.id.settings_content, settingsGame, "SettingsGame")
-				.add(R.id.settings_content, settingsEducation,
-						"SettingsEducation")
-				.add(R.id.settings_content, settingsNetwork, "SettingsNetwork")
-				.add(R.id.settings_content, settingsMusic, "SettingsMusic")
-				.add(R.id.settings_content, settingsVideo, "SettingsVideo")
-				.add(R.id.settings_content, settingsCheckSelf,
-						"SettingsCheckSelf")
-				.add(R.id.settings_content, settingsLock, "SettingsLock")
-				.add(R.id.settings_content, settingsLanguage,
-						"SettingsLanguage")
-				.add(R.id.settings_content, settingsFeature, "SettingsFeature")
-				.commit();
-
 		mFragments.clear();
-		mFragments.add(settingsCarInfo);
-		mFragments.add(settingsGeneral);
-		mFragments.add(settingsGame);
-		mFragments.add(settingsEducation);
-		mFragments.add(settingsNetwork);
-		mFragments.add(settingsMusic);
-		mFragments.add(settingsVideo);
-		mFragments.add(settingsCheckSelf);
-		mFragments.add(settingsLock);
-		mFragments.add(settingsLanguage);
-		mFragments.add(settingsFeature);
+
+		FragmentTransaction fragmentTransaction = mFragmentManager
+				.beginTransaction();
+
+		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
+				settingsCarInfo);
+		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
+				settingsGeneral);
+		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
+				settingsGame);
+		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
+				settingsEducation);
+		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
+				settingsNetwork);
+		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
+				settingsMusic);
+		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
+				settingsVideo);
+		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
+				settingsCheckSelf);
+		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
+				settingsLock);
+		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
+				settingsLanguage);
+		addFragmentToTransaction(fragmentTransaction, R.id.settings_content,
+				settingsFeature);
+		fragmentTransaction.commit();
 	}
-	
+
+	private void addFragmentToTransaction(
+			FragmentTransaction fragmentTransaction, int containerViewId,
+			Fragment fragment) {
+		if (!fragment.isAdded()) {
+			fragmentTransaction.add(containerViewId, fragment);
+			fragmentTransaction.hide(fragment);
+		}
+		mFragments.add(fragment);
+	}
+
 	public ViewGroup getContentView() {
 		return mContentLayout;
 	}

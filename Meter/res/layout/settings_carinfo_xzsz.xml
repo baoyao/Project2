@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00ffff"
     android:padding="10dp" >
 
     <TextView
@@ -10,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:text="现在设置"
+        android:text="@string/car_info_xzsz"
         android:textSize="20sp" />
 
     <View
@@ -34,38 +33,82 @@
         android:layout_height="match_parent"
         android:layout_above="@id/lineBottom"
         android:layout_below="@id/lineTop"
-        android:layout_centerInParent="true" >
+        android:layout_centerInParent="true"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
             android:orientation="vertical" >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="速度：0.0km/h" />
+                android:text="@string/car_info_sudu"
+                android:textSize="@dimen/settings_xzsz_text_size" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="速度杆：N" />
+                android:layout_marginTop="@dimen/settings_xzsz_margin_top"
+                android:text="@string/car_info_sudugan"
+                android:textSize="@dimen/settings_xzsz_text_size" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="控制：遥控行驶模式" />
+                android:layout_marginTop="@dimen/settings_xzsz_margin_top"
+                android:text="@string/car_info_kongzhi"
+                android:textSize="@dimen/settings_xzsz_text_size" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RPM：0" />
+                android:layout_marginTop="@dimen/settings_xzsz_margin_top"
+                android:text="@string/car_info_rpm"
+                android:textSize="@dimen/settings_xzsz_text_size" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center" >
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/car_info_dangwei"
+                android:textSize="@dimen/settings_xzsz_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_xzsz_margin_top"
+                android:text="@string/car_info_moshi"
+                android:textSize="@dimen/settings_xzsz_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_xzsz_margin_top"
+                android:text="@string/car_info_dianliang"
+                android:textSize="@dimen/settings_xzsz_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_xzsz_margin_top"
+                android:text="@string/car_info_deng"
+                android:textSize="@dimen/settings_xzsz_text_size" />
         </LinearLayout>
     </LinearLayout>
 

@@ -9,4 +9,7 @@
     
     <color name="text_normal_bg">#00000000</color>
     <color name="text_pressed_bg">#00ff00</color>
+    
+    <color name="settings_xzsz_bottom_option_selected_normal">#ffffff</color>
+    <color name="settings_xzsz_bottom_option_selected_color">#00ffff</color>
 </resources>
