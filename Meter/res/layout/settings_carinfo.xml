@@ -9,15 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="horizontal"
-        android:gravity="center" >
+        android:gravity="center"
+        android:orientation="horizontal" >
 
         <LinearLayout
             android:id="@+id/settings_carinfo_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="40dp"
-            android:orientation="horizontal">
+            android:layout_margin="@dimen/settings_content_margin"
+            android:orientation="horizontal" >
         </LinearLayout>
     </LinearLayout>
 
@@ -28,7 +28,7 @@
         android:layout_weight="5"
         android:orientation="horizontal" >
 
-        <include layout="@layout/settings_carinfo_bottom_option"/>
+        <include layout="@layout/settings_carinfo_bottom_option" />
     </LinearLayout>
 
 </LinearLayout>

@@ -5,16 +5,16 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
 import com.example.meter.R;
+import com.example.meter.detail.settings.ConfigurationUtil;
 
 public class SpeedActivity extends BaseActivity {
 
-	private TextView title,dangWeiTxt;
+	private TextView title, dangWeiTxt;
 	/** 档位 */
 	private SeekBar dangWeiSeekBar;
 
 	@Override
 	public void setContentView() {
-		// TODO Auto-generated method stub
 		setContentView(R.layout.speed_screen);
 		title = (TextView) findViewById(R.id.title);
 		dangWeiTxt = (TextView) findViewById(R.id.dangWeiTxt);
@@ -23,41 +23,28 @@ public class SpeedActivity extends BaseActivity {
 
 	@Override
 	public void setTopView() {
-		// TODO Auto-generated method stub
 		title.setText(getResources().getString(R.string.speed));
 	}
 
 	@Override
-	public void setCenterView() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void setBottomView() {
-		// TODO Auto-generated method stub
 		dangWeiSeekBar
 				.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 
 					@Override
 					public void onStopTrackingTouch(SeekBar seekBar) {
 						// TODO Auto-generated method stub
-						int p=seekBar.getProgress();
-						if(p>350){
-							seekBar.setProgress(400);
-							dangWeiTxt.setText(5+"");
-						}else if(p>250){
-							seekBar.setProgress(300);
-							dangWeiTxt.setText(4+"");
-						}else if(p>150){
-							seekBar.setProgress(200);
-							dangWeiTxt.setText(3+"");
-						}else if(p>50){
-							seekBar.setProgress(100);
-							dangWeiTxt.setText(2+"");
-						}else{
-							seekBar.setProgress(0);
-							dangWeiTxt.setText(1+"");
+						int p = seekBar.getProgress();
+						if (p > (((5 - 2) * 100) + 50)) {
+							setSeekBarProgress(5);
+						} else if (p > (((4 - 2) * 100) + 50)) {
+							setSeekBarProgress(4);
+						} else if (p > (((3 - 2) * 100) + 50)) {
+							setSeekBarProgress(3);
+						} else if (p > (((2 - 2) * 100) + 50)) {
+							setSeekBarProgress(2);
+						} else {
+							setSeekBarProgress(1);
 						}
 					}
 
@@ -73,6 +60,17 @@ public class SpeedActivity extends BaseActivity {
 						// TODO Auto-generated method stub
 					}
 				});
+
+		int speed = ConfigurationUtil.getInstance(this).getConfigurationForInt(
+				ConfigurationUtil.SHARED_KEY_SPEED);
+		setSeekBarProgress(speed);
+	}
+
+	private void setSeekBarProgress(int position) {
+		dangWeiSeekBar.setProgress((position - 1) * 100);
+		dangWeiTxt.setText(position + "");
+		ConfigurationUtil.getInstance(this).saveConfiguration(
+				ConfigurationUtil.SHARED_KEY_SPEED, position);
 	}
 
 }

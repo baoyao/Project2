@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/settings_content_margin"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/settings_language_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_language_title"
+        android:textSize="@dimen/settings_title_size" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/settings_language_title"
+        android:layout_marginTop="8dp"
+        android:background="@color/line_bg_color" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_language_title"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="150dp"
+        android:layout_toRightOf="@id/settings_language_title"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_language_sub_title"
+            android:textSize="@dimen/settings_sub_title_size" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_language_sub_title_des"/>
+
+        <RadioGroup
+            android:id="@+id/settings_language_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+</RelativeLayout>

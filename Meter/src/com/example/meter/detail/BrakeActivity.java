@@ -5,6 +5,7 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
 import com.example.meter.R;
+import com.example.meter.detail.settings.ConfigurationUtil;
 
 public class BrakeActivity extends BaseActivity {
 
@@ -13,7 +14,6 @@ public class BrakeActivity extends BaseActivity {
 
 	@Override
 	public void setContentView() {
-		// TODO Auto-generated method stub
 		setContentView(R.layout.brake_screen);
 		title = (TextView) findViewById(R.id.title);
 		brakeModeSeekBar=(SeekBar) findViewById(R.id.brakeModeSeekBar);
@@ -21,45 +21,47 @@ public class BrakeActivity extends BaseActivity {
 
 	@Override
 	public void setTopView() {
-		// TODO Auto-generated method stub
 		title.setText(getResources().getString(R.string.brake));
 		
 	}
 
 	@Override
 	public void setCenterView() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void setBottomView() {
-		// TODO Auto-generated method stub
 		brakeModeSeekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 			
 			@Override
 			public void onStopTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
 				if(seekBar.getProgress()>50){
-					seekBar.setProgress(100);
+					setSeekBarProgress(ConfigurationUtil.BRAKE_AUTO);
 				}else{
-					seekBar.setProgress(0);
+					setSeekBarProgress(ConfigurationUtil.BRAKE_MANUAL);
 				}
 			}
 			
 			@Override
 			public void onStartTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
 				
 			}
 			
 			@Override
 			public void onProgressChanged(SeekBar seekBar, int progress,
 					boolean fromUser) {
-				// TODO Auto-generated method stub
 				
 			}
 		});
+		setSeekBarProgress(ConfigurationUtil.getInstance(this)
+				.getConfigurationForInt(ConfigurationUtil.SHARED_KEY_BRAKE));
+	}
+
+	private void setSeekBarProgress(int position) {
+		brakeModeSeekBar.setProgress((position - 1) * 100);
+		ConfigurationUtil.getInstance(this).saveConfiguration(
+				ConfigurationUtil.SHARED_KEY_BRAKE, position);
 	}
 
 }

@@ -2,27 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/settings_content_margin"
     android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="180dp"
-        android:orientation="horizontal" >
+        android:orientation="vertical" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/settings_general_title"
-            android:textSize="20sp" />
+            android:textSize="@dimen/settings_title_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/line_bg_color" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="150dp"
         android:orientation="horizontal" >
 
         <LinearLayout
@@ -101,7 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/settings_general_item_margin_top"
-                android:text="@string/settings_general_rw"
+                android:text="@string/settings_general_sw"
                 android:textSize="18sp" />
 
             <TextView

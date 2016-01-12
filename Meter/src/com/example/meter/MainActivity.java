@@ -11,7 +11,7 @@ import android.os.Message;
 import android.view.View;
 
 import com.example.meter.detail.BrakeActivity;
-import com.example.meter.detail.ControllActivity;
+import com.example.meter.detail.ControlActivity;
 import com.example.meter.detail.LightActivity;
 import com.example.meter.detail.LockActivity;
 import com.example.meter.detail.ModeActivity;
@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
 			intent.setClass(this, ModeActivity.class);
 			break;
 		case R.id.btn_3:
-			intent.setClass(this, ControllActivity.class);
+			intent.setClass(this, ControlActivity.class);
 			break;
 		case R.id.btn_4:
 			intent.setClass(this, BrakeActivity.class);

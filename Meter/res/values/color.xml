@@ -12,4 +12,6 @@
     
     <color name="settings_xzsz_bottom_option_selected_normal">#ffffff</color>
     <color name="settings_xzsz_bottom_option_selected_color">#00ffff</color>
+    
+    <color name="line_bg_color">#ffffff</color>
 </resources>

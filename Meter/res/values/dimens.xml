@@ -12,5 +12,10 @@
     <dimen name="settings_xzsz_margin_top">30dp</dimen>
     
     <dimen name="settings_general_item_margin_top">30dp</dimen>
+    
+    <dimen name="settings_title_size">30dp</dimen>
+    <dimen name="settings_sub_title_size">25dp</dimen>
+    
+    <dimen name="settings_content_margin">40dp</dimen>
 
 </resources>

@@ -1,5 +1,8 @@
 package com.example.meter.detail.settings;
 
+import com.example.meter.R;
+import com.example.meter.detail.SettingsActivity;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -13,7 +16,10 @@ public class SettingsGame extends Fragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		return super.onCreateView(inflater, container, savedInstanceState);
+		View content = inflater.inflate(R.layout.settings_game,
+				((SettingsActivity) getActivity()).getContentView(), false);
+		
+		return content;
 	}
 
 }
