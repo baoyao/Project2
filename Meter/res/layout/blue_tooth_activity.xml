@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="蓝牙通讯: 未连接"
+        android:textColor="#ff0000"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_getService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="获取支持的服务" />
+
+    <EditText
+        android:id="@+id/et_cmd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_getService"
+        android:layout_marginTop="20dp"
+        android:hint="abcdef" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_cmd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="发送" />
+
+    <TextView
+        android:id="@+id/tv_receive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_send"
+        android:layout_marginTop="20dp"
+        android:hint="接收到的数据" />
+
+    <Button
+        android:id="@+id/btn_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_receive"
+        android:layout_marginTop="20dp"
+        android:text="接收数据" />
+
+    <Button
+        android:id="@+id/btn_getstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_receive"
+        android:layout_marginTop="20dp"
+        android:text="获取状态" />
+
+</RelativeLayout>

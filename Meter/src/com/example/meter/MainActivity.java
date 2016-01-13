@@ -43,7 +43,11 @@ public class MainActivity extends Activity {
 	}
 
 	public void btnOnclick(View view) {
-		Intent intent = new Intent();
+		Intent intent = null;
+		if(view.getId()!=R.id.btn_6){
+			intent = new Intent();
+		}
+		
 		switch (view.getId()) {
 		case R.id.btn_1:
 			intent.setClass(this, SpeedActivity.class);
